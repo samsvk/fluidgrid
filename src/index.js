@@ -1,7 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import "./index.scss";
-import Grid from "./Grid";
+import Grid from "./grid";
 
 function App() {
   return (
