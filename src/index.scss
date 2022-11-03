@@ -1,0 +1,120 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  line-height: 1.5;
+  font: inherit;
+  vertical-align: baseline;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizelegibility;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  position: relative;
+  display: block;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+a {
+  color: inherit;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+input {
+  -webkit-appearance: none;
+}
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+  display: block;
+  max-width: 100%;
+}
+
+/* Prevents img without src to appear */
+img:not([src]) {
+  visibility: hidden;
+}
+$backgroundColor: #222;
+$inputBackgroundColor: #333;
+$grey1: #eee;
+$grey2: #aaa;
+$grey3: #777;
+$transparentBorder: hsla(0, 0%, 100%, 0.1);
+@mixin text {
+  font-size: 18px;
+  line-height: 1.1;
+  letter-spacing: -0.05rem;
+}
+
+body {
+  background: $backgroundColor;
+  font-family: "Inter", sans-serif;
+  color: $grey1;
+  @include text;
+}
+.wrapper {
+  max-width: 1760px;
+  width: 100%;
+  margin: 2rem auto;
+  .grid {
+    &__item {
+      border: 1px solid $transparentBorder;
+      background: $inputBackgroundColor;
+    }
+  }
+}
